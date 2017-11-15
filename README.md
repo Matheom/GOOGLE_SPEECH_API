@@ -4,7 +4,7 @@ This repository contains an example of how to use the google speech API with a l
 
 This work can be done either from your own laptop, or within the Google Cloud Shell inside Google Console. I would recommend using the latter, since the speech API does not (in my experience) ingest larger files.
 
-The first step is to download a podcast from the 703 website. This can be done from the shell using the following command (you can choose your own podcast)
+The first step is to download a podcast from the 702 website. This can be done from the shell using the following command (you can choose your own podcast)
 
 wget -O 20171005.mp3 http://omnystudio.com/d/clips/5dcefa8e-00a9-4595-8ce1-a4ab0080f142/1ecba37a-6d83-4ee9-a295-a57100b7f2df/b1215d79-d875-4862-8890-a8030130aebe/audio.mp3?utm_source=Podcast&in_playlist=e3347658-6eee-44e2-bf81-a57100b92442
 
