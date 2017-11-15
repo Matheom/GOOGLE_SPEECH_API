@@ -35,7 +35,11 @@ Now that we have divided the file up into manageable chunks, let's convert one o
 
 ffmpeg -i file.mp3 -c:v libx264 file.flac
 
-And then export it to Google Storage
+I found that some of the files turned out to be 2 channels, while others were one. Not sure why the chunks came out different? I used ffmpeg again to force the flac file into 1 channel, since that is the foormat required by the google speech api
+
+ffmpeg -i file.flac -ac 1 file_mono.flac
+
+Finally, I export this into cloud storage
 
 gsutil file.flac gs://your-bucket-name/
 
