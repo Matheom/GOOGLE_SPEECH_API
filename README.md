@@ -8,18 +8,17 @@ The first step is to download a podcast from the 702 website. This can be done f
 
 wget -O 20171005.mp3 http://omnystudio.com/d/clips/5dcefa8e-00a9-4595-8ce1-a4ab0080f142/1ecba37a-6d83-4ee9-a295-a57100b7f2df/b1215d79-d875-4862-8890-a8030130aebe/audio.mp3?utm_source=Podcast&in_playlist=e3347658-6eee-44e2-bf81-a57100b92442
 
-You can then upload it into Cloud Storage with the following command. Remember to create a bucket first, and then reference it
+You can then upload it into Cloud Storage with the following command. Remember to create a bucket first, and then reference it. You can also create a bucket directly from the cloud shell
 
 gsutil cp 20171005.mp3 gs://your-bucket-name/
 
 Now you have the mp3 file in your bucket, and in your console shell.
 
-Next, you need to enable the Google Speech API, and create a key. THe documentation suggests you should create a service acocunt key
-u from your bucket into you cloud shell with the following command
+Next, you need to enable the Google Speech API, and create a key. The documentation suggests you should create a service acocunt key. Go to API, and create a Service Account credential. You should be able to download the apikey as a json format. You can then simply drag it into your bucket, and then use the following command to upload it into yout shell
 
 gsutil cp gs://your-bucket-name/apikey.json ~/your-shell-folder
 
-Now you should have both the apikey and the mp3 file in your shell directory. The documentation states you should write the following command to ensure the credentials are used when making the api call
+Now you should have both the apikey and the mp3 file in your shell directory. The documentation states you should write the following command to ensure your script uses your credentials when making the API call
 
 export GOOGLE_APPLICATION_CREDENTIALS=apikey.json
 
